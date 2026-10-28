@@ -1,0 +1,269 @@
+/* ========================================
+   SITE HEADER
+======================================== */
+
+.site-header {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    z-index: var(--z-header);
+}
+
+
+/* ========================================
+   NAVIGATION
+======================================== */
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+
+    padding: 24px 40px;
+}
+
+
+/* ========================================
+   LOGO
+======================================== */
+
+.nav__logo {
+    display: inline-flex;
+    align-items: center;
+
+    font-family: var(--font-body);
+
+    font-size: 0.8rem;
+    font-weight: 600;
+
+    line-height: 1;
+
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+
+/* ========================================
+   DESKTOP LINKS
+======================================== */
+
+.nav__links {
+    display: flex;
+    align-items: center;
+
+    gap: 2rem;
+}
+
+.nav__link {
+    position: relative;
+
+    font-family: var(--font-body);
+
+    font-size: 0.7rem;
+    font-weight: 500;
+
+    line-height: 1;
+
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+
+/* ========================================
+   LINK UNDERLINE
+======================================== */
+
+.nav__link::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -6px;
+
+    width: 100%;
+    height: 1px;
+
+    background: currentColor;
+
+    transform: scaleX(0);
+    transform-origin: right;
+
+    transition:
+        transform var(--transition-medium);
+}
+
+.nav__link:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+
+/* ========================================
+   CONTACT CTA
+======================================== */
+
+.nav__contact {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 0.6rem;
+
+    min-height: 40px;
+
+    padding: 0.7rem 1rem;
+
+    background: transparent;
+    color: var(--color-text);
+
+    border: 1px solid var(--color-text);
+
+    font-family: var(--font-body);
+
+    font-size: 0.7rem;
+    font-weight: 500;
+
+    line-height: 1;
+
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+
+    transition:
+        background 300ms var(--ease-standard),
+        color 300ms var(--ease-standard),
+        border-color 300ms var(--ease-standard),
+        transform 300ms var(--ease-standard);
+}
+
+.nav__contact-arrow {
+    display: inline-block;
+
+    font-size: 0.9rem;
+
+    transition:
+        transform 300ms var(--ease-standard);
+}
+
+.nav__contact:hover {
+    background: var(--color-accent);
+
+    border-color: var(--color-accent);
+
+    color: var(--color-white);
+
+    transform:
+        translateY(-2px)
+        scale(1.04);
+}
+
+.nav__contact:hover
+.nav__contact-arrow {
+    transform: translate(2px, -2px);
+}
+
+
+/* ========================================
+   MOBILE MENU BUTTON
+======================================== */
+
+.nav__menu-button {
+    display: none;
+
+    align-items: center;
+
+    gap: 0.75rem;
+
+    color: inherit;
+}
+
+.nav__menu-label {
+    font-family: var(--font-body);
+
+    font-size: 0.7rem;
+    font-weight: 500;
+
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.nav__menu-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    gap: 5px;
+
+    width: 22px;
+}
+
+.nav__menu-icon span {
+    display: block;
+
+    width: 100%;
+    height: 1px;
+
+    background: currentColor;
+}
+
+/* BRAND LOGO */
+
+.nav__logo {
+    display: inline-flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.nav__logo img {
+    display: block;
+    width: 100px;
+    height: auto;
+    object-fit: contain;
+}
+
+@media (max-width: 767px) {
+    .nav__logo img {
+        width: 78px;
+    }
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 767px) {
+
+    .nav {
+        padding: 20px;
+    }
+
+    .nav__links {
+        display: none;
+    }
+
+    .nav__menu-button {
+        display: flex;
+    }
+
+}
+/* ==========================================
+   NAVBAR SCROLL STATE
+========================================== */
+
+.site-header {
+    transition:
+        background-color 300ms ease,
+        border-color 300ms ease;
+}
+
+.site-header.site-header--scrolled {
+    background-color: rgba(244, 240, 232, 0.96);
+    border-bottom: 1px solid var(--border-color);
+}

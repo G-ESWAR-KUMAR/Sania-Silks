@@ -1,0 +1,47 @@
+:root {
+    --color-bg: #f4f0e8;
+    --color-text: #171614;
+    --color-text-muted: #706c64;
+    --color-accent: #641f2b;
+    --color-dark: #191816;
+    --color-white: #ffffff;
+
+    --font-display: "Cormorant Garamond", serif;
+    --font-body: "Inter", sans-serif;
+
+    --container-width: 1440px;
+
+    --container-padding-desktop: 40px;
+    --container-padding-tablet: 32px;
+    --container-padding-mobile: 20px;
+
+    --grid-columns: 12;
+    --grid-gap: 24px;
+
+    --space-1: 0.25rem;
+    --space-2: 0.5rem;
+    --space-3: 0.75rem;
+    --space-4: 1rem;
+    --space-5: 1.5rem;
+    --space-6: 2rem;
+    --space-7: 3rem;
+    --space-8: 4rem;
+    --space-9: 6rem;
+    --space-10: 8rem;
+    --space-11: 12rem;
+
+    --border-width: 1px;
+    --border-color: rgba(23, 22, 20, 0.18);
+
+    --radius-sm: 2px;
+    --radius-md: 4px;
+
+    --ease-standard: cubic-bezier(0.22, 1, 0.36, 1);
+
+    --transition-fast: 250ms var(--ease-standard);
+    --transition-medium: 500ms var(--ease-standard);
+
+    --z-base: 1;
+    --z-header: 100;
+    --z-overlay: 200;
+}
